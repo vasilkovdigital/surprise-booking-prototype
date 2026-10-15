@@ -1,0 +1,16 @@
+{
+  "name": "surprise-booking-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Прототип онлайн-бронирования Surprise.by (тестовая версия)",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "seed": "node --disable-warning=ExperimentalWarning src/seed.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js",
+    "build:static": "node --disable-warning=ExperimentalWarning scripts/build-static.mjs"
+  }
+}
