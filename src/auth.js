@@ -1,21 +1,19 @@
-import { randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
+import { randomHex, kdfHex, safeEqual } from '#crypto';
 import { get, run } from './db.js';
 import { fmtDT } from './time.js';
 import { strict } from './config.js';
 
 export function hashPassword(pw) {
-  const salt = randomBytes(8).toString('hex');
-  return `${salt}:${scryptSync(pw, salt, 32).toString('hex')}`;
+  const salt = randomHex(8);
+  return `${salt}:${kdfHex(pw, salt)}`;
 }
 export function checkPassword(pw, stored) {
   const [salt, hash] = stored.split(':');
-  const a = scryptSync(pw, salt, 32);
-  const b = Buffer.from(hash, 'hex');
-  return a.length === b.length && timingSafeEqual(a, b);
+  return safeEqual(kdfHex(pw, salt), hash);
 }
 
 export function createSession() {
-  const id = randomBytes(18).toString('hex');
+  const id = randomHex(18);
   run('INSERT INTO sessions (id,created_at) VALUES (?,?)', id, fmtDT(new Date()));
   return id;
 }

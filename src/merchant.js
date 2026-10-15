@@ -45,6 +45,7 @@ function photos(main, extra) {
 
 /** Возвращает массив записей для таблицы services (без partner_id). */
 export function readMerchant(file) {
+  if (globalThis.__MERCHANT_ROWS__) return globalThis.__MERCHANT_ROWS__; // браузерная сборка: данные вшиты в бандл
   if (!fs.existsSync(file)) return [];
   const rows = parseCsv(fs.readFileSync(file, 'utf8'));
   const head = rows.shift();

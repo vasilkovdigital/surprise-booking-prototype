@@ -1,4 +1,4 @@
-import { randomInt } from 'node:crypto';
+import { randomDigit } from '#crypto';
 import { get, run, tx } from './db.js';
 import { fmtDT, addMonths } from './time.js';
 
@@ -70,7 +70,7 @@ export const formatCode = (c) => c.replace(/(\d{4})(?=\d)/g, '$1 ');
 function newCode() {
   for (;;) {
     let c = '';
-    for (let i = 0; i < 12; i++) c += randomInt(0, 10);
+    for (let i = 0; i < 12; i++) c += randomDigit();
     if (!get('SELECT 1 FROM certificates WHERE code=?', c)) return c;
   }
 }
@@ -117,6 +117,6 @@ export function checkCode(raw) {
 }
 
 export function certificateTitle(cert) {
-  if (cert.bundle_id) return `Набор «${get('SELECT title FROM bundles WHERE id=?', cert.bundle_id).title}»`;
+  if (cert.bundle_id) { const t = get('SELECT title FROM bundles WHERE id=?', cert.bundle_id).title; return /^Набор/i.test(t) ? t : `Набор «${t}»`; }
   return `«${get('SELECT title FROM services WHERE id=?', cert.service_id).title}»`;
 }

@@ -1,262 +1,38 @@
 <!doctype html>
 <html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Незабываемые впечатления — Surprise.by (тест)</title>
-<meta name="description" content="Surprise.by — агрегатор незабываемых впечатлений: бронируйте, дарите и делитесь.">
+<title>Surprise.by — запуск прототипа…</title>
 <link rel="icon" href="/surprise-booking-prototype/brand/mark-confetti.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/surprise-booking-prototype/style.css">
-<script>document.documentElement.classList.add('js')</script>
-<script>window.STATIC=true;window.BASE="/surprise-booking-prototype";</script>
-</head><body>
-<div class="test-banner">ТЕСТОВАЯ ВЕРСИЯ · статическая демо-витрина: бронь, корзина и кабинеты — в полной версии</div>
-<header class="top" id="hdr">
-  <div class="wrap bar">
-    <a class="logo" href="/surprise-booking-prototype/"><img src="/surprise-booking-prototype/brand/logo.svg" alt="Surprise.by"></a>
-    <div class="hact">
-      <a class="btn hl" href="/surprise-booking-prototype/demo/">Активировать<span class="d">сертификат</span></a>
-      <a class="btn alt" href="/surprise-booking-prototype/demo/">Вход / Регистрация</a>
-      <a class="cartm" href="/surprise-booking-prototype/demo/" aria-label="Корзина"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 4h2.2l2.2 11h10.2l2-8H6.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="9" cy="19.2" r="1.4" fill="currentColor"/><circle cx="16.5" cy="19.2" r="1.4" fill="currentColor"/></svg></a>
-      <button type="button" class="burger" aria-label="Меню" aria-expanded="false" onclick="const h=document.getElementById('hdr');this.setAttribute('aria-expanded',h.classList.toggle('open'))">☰</button>
-    </div>
-  </div>
-  <nav class="wrap menu">
-    <div class="links"><a href="/surprise-booking-prototype/" class="on" >Каталог впечатлений</a><a href="/surprise-booking-prototype/blog/" class="" >Блог</a><a href="/surprise-booking-prototype/delivery/" class="" >Оплата и доставка</a><a href="/surprise-booking-prototype/about/" class="" >О компании</a><a href="/surprise-booking-prototype/partners/" class="" >Партнерам</a><a href="https://corp.surprise.by" class="" target="_blank" rel="noopener">Компаниям</a></div>
-    <div class="tools"><a href="/surprise-booking-prototype/search/" class="" >Поиск</a><a class="m-only" href="/surprise-booking-prototype/demo/">Вход / Регистрация</a><a href="/surprise-booking-prototype/demo/" class="">Корзина</a></div>
-  </nav>
-</header>
-<main class="wrap"><h1 class="sr-only">Surprise.by — незабываемые впечатления</h1><section class="hero" data-carousel>
-    <div class="hero-track"><div class="hero-slide c-blue on">
-      <div class="hero-text"><div class="eyebrow">Surprise.by · сервис впечатлений</div><h2>Незабываемые впечатления на любой повод</h2><p>От SPA до полёта на воздушном шаре. Выбирайте, бронируйте онлайн, дарите и делитесь.</p>
-        <a class="btn" href="#catalog" >Выбрать впечатление →</a></div>
-      <img class="hero-mark" src="/surprise-booking-prototype/brand/mark-confetti.svg" alt=""></div><div class="hero-slide c-pink ">
-      <div class="hero-text"><div class="eyebrow">Бесплатно в Telegram</div><h2>Свайпайте впечатления — собирайте вишлист</h2><p>Свайп вправо — в вишлист, влево — дальше. Покажите близким, чего вам хочется.</p>
-        <a class="btn" href="https://t.me/wishlistsurprisebot" target="_blank" rel="noopener">Открыть в Telegram →</a></div>
-      <img class="hero-mark" src="/surprise-booking-prototype/brand/mark-gift.svg" alt=""></div><div class="hero-slide c-purple ">
-      <div class="hero-text"><div class="eyebrow">Эксклюзив</div><h2>Впечатления, которых нет больше нигде</h2><p>Предложения партнёров на условиях, доступных только в Surprise.by.</p>
-        <a class="btn" href="/surprise-booking-prototype/?exclusive=1#catalog" >Смотреть эксклюзив →</a></div>
-      <img class="hero-mark" src="/surprise-booking-prototype/brand/mark-smile.svg" alt=""></div><div class="hero-slide c-green ">
-      <div class="hero-text"><div class="eyebrow">Для бизнеса</div><h2>Впечатления для команды и партнёров</h2><p>Подберём формат, упаковку и способ вручения для сотрудников и клиентов.</p>
-        <a class="btn" href="https://corp.surprise.by" target="_blank" rel="noopener">Для компаний →</a></div>
-      <img class="hero-mark" src="/surprise-booking-prototype/brand/mark-confetti.svg" alt=""></div></div>
-    <button type="button" class="hero-nav prev" aria-label="Назад">‹</button><button type="button" class="hero-nav next" aria-label="Вперёд">›</button>
-    <div class="hero-dots"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div></section><section class="advstrip"><div><b>101 тыс.</b><span>подарено</span></div><div><b>300+</b><span>впечатлений</span></div><div><b>150+</b><span>партнёров</span></div><div><b>15 лет</b><span>опыта</span></div></section><section class="block" id="catalog"><div class="eyebrow">Каталог</div><h2 class="big">Каталог впечатлений</h2>
-    <form id="filters" autocomplete="off">
-      <input type="hidden" name="cat" value="">
-      <div class="toolbar">
-        <label class="excl"><input type="checkbox" name="exclusive" value="1" >✦ Эксклюзив Surprise.by</label>
-        <div class="budget"><div class="pills"><label class="pill"><input type="radio" name="budget" value="" checked>любой</label><label class="pill"><input type="radio" name="budget" value="0-50" >до 50 руб</label><label class="pill"><input type="radio" name="budget" value="50-100" >50-100 руб</label><label class="pill"><input type="radio" name="budget" value="100-300" >100-300 руб</label><label class="pill"><input type="radio" name="budget" value="300-" >более 300 руб</label></div></div>
-      </div>
-      <div class="cats"><button type="button" class="cat on" data-cat=""><span class="ico c-blue"><b>Все</b></span><em>Все</em></button>
-    <button type="button" class="cat " data-cat="Активный отдых"><span class="ico c-green"><img src="/surprise-booking-prototype/brand/mark-confetti.svg" alt=""></span><em>Активный отдых</em></button><button type="button" class="cat " data-cat="SPA и красота"><span class="ico c-pink"><img src="/surprise-booking-prototype/brand/mark-smile.svg" alt=""></span><em>SPA и красота</em></button><button type="button" class="cat " data-cat="Творчество и обучение"><span class="ico c-purple"><img src="/surprise-booking-prototype/brand/mark-gift.svg" alt=""></span><em>Творчество и обучение</em></button><button type="button" class="cat " data-cat="Еда и рестораны"><span class="ico c-blue"><img src="/surprise-booking-prototype/brand/mark-smile.svg" alt=""></span><em>Еда и рестораны</em></button><button type="button" class="cat " data-cat="Впечатления премиум"><span class="ico c-green"><img src="/surprise-booking-prototype/brand/mark-gift.svg" alt=""></span><em>Впечатления премиум</em></button><button type="button" class="cat " data-cat="Универсальные"><span class="ico c-pink"><img src="/surprise-booking-prototype/brand/mark-confetti.svg" alt=""></span><em>Универсальные</em></button></div>
-      <details class="more" ><summary>Больше фильтров</summary>
-        <div class="fgrid">
-          <label>Количество человек<select name="people"><option value="">Любое</option><option value="1" >1 человек</option><option value="2" >2 человека</option><option value="3" >3 и более</option></select></label>
-          <label>Город<select name="city"><option value="">Любой</option><option value="Минск" >Минск</option><option value="Брест" >Брест</option><option value="Витебск" >Витебск</option><option value="Гомель" >Гомель</option><option value="Гродно" >Гродно</option><option value="Могилёв" >Могилёв</option></select></label>
-          <label>Повод<select name="occasion"><option value="">Любой</option><option value="День рождения" >День рождения</option><option value="Новый год" >Новый год</option><option value="14 февраля" >14 февраля</option><option value="23 февраля" >23 февраля</option><option value="8 марта" >8 марта</option><option value="Свадьба" >Свадьба</option><option value="Годовщина" >Годовщина</option><option value="Юбилей" >Юбилей</option></select></label>
-          <label>Пол<select name="gender"><option value="">Любой</option><option value="f" >Женщине</option><option value="m" >Мужчине</option></select></label>
-          <label>Возраст<select name="age"><option value="">Любой</option><option value="kids" >Ребёнку</option><option value="teens" >Подростку</option><option value="adult" >Взрослому</option></select></label>
-          <label class="chk"><input type="checkbox" name="new" value="1" > Только новинки</label>
-        </div></details>
-      <div class="sortbar"><span id="count" class="muted">Найдено: 359</span>
-        <label class="inl">Сортировка <select name="sort"><option value="popular" selected>По популярности</option><option value="price_asc" >Сначала дешевле</option><option value="price_desc" >Сначала дороже</option><option value="rating" >По рейтингу</option><option value="cashback" >По кэшбэку</option><option value="new" >Новинки</option></select></label></div>
-      <noscript><button class="btn sm">Применить фильтры</button></noscript>
-    </form>
-    <div class="gallery" id="grid"><article class="tile" data-key="s108" data-price="450">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/108/" aria-label="Парный ритуал «Нити Судьбы» в СПА салоне &quot;Икигай&quot;"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/6ae/g3msnlfkcm38ualajhcjxxnug2z6ig4m.webp" alt="Парный ритуал «Нити Судьбы» в СПА салоне &quot;Икигай&quot;" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/997/sc66j16jynaotk035ngal0dx0mwjs1z5.webp" alt="Парный ритуал «Нити Судьбы» в СПА салоне &quot;Икигай&quot;" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/564/tuwbnpl6sg1988bj0fr83hgmluca25q7.webp" alt="Парный ритуал «Нити Судьбы» в СПА салоне &quot;Икигай&quot;" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span><span class="bdg b-new">Новинка</span></div>
-      <button type="button" class="fav" data-fav="s108" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.9</b> · 4 отзыва</div>
-      
-      <a class="name" href="/surprise-booking-prototype/service/108/">Парный ритуал «Нити Судьбы» в СПА салоне &quot;Икигай&quot;</a>
-      <div class="sub">SPA и красота</div>
-      <div class="price">450 руб.</div>
-      <div class="btns"><a class="btn block" href="/surprise-booking-prototype/demo/">Купить сейчас</a><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s29" data-price="365">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/29/" aria-label="Пробный урок дрифта на подготовленном авто"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/8a1/f6f848fc71c22c9htzhebldesvsikuwv.webp" alt="Пробный урок дрифта на подготовленном авто" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/ed8/nszp1lcr3k7nqgjajophviqvaov4pu18.webp" alt="Пробный урок дрифта на подготовленном авто" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/5a6/9gbimw629ziyzspngdmdvlkkx3rpowqr.webp" alt="Пробный урок дрифта на подготовленном авто" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-excl">Эксклюзив</span><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s29" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.8</b> · 122 отзыва</div>
-      
-      <a class="name" href="/surprise-booking-prototype/service/29/">Пробный урок дрифта на подготовленном авто</a>
-      <div class="sub">Впечатления премиум</div>
-      <div class="price">365 руб.</div>
-      <div class="btns"><a class="btn block" href="/surprise-booking-prototype/demo/">Купить сейчас</a><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s1" data-price="120">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/1/" aria-label="Прокат квадроциклов, 1 час"><div class="track"><div class="slide c-purple"><img src="/surprise-booking-prototype/brand/mark-gift.svg" alt="" loading="lazy"></div><div class="slide c-blue"><img src="/surprise-booking-prototype/brand/mark-confetti.svg" alt="" loading="lazy"></div><div class="slide c-green"><img src="/surprise-booking-prototype/brand/mark-smile.svg" alt="" loading="lazy"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s1" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.8</b> · 274 отзыва</div>
-      <span class="cb" tabindex="0">кэшбэк до 12 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/1/">Прокат квадроциклов, 1 час</a>
-      <div class="sub">Активный отдых</div>
-      <div class="price">120 руб.</div>
-      <div class="btns"><a class="btn block" href="/surprise-booking-prototype/demo/">Купить сейчас</a><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s25" data-price="60">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/25/" aria-label="Картинг в «Smart Racing»: гонки в стайках"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/47b/110l05c9mhmymdbetlueby09xngatm7f.webp" alt="Картинг в «Smart Racing»: гонки в стайках" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/1d9/dw8h44znufc4x6am81bf93lfrdew18uz.webp" alt="Картинг в «Smart Racing»: гонки в стайках" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/554/3dz49cv55ume7yc4lq9u8qp7i1yfqpa8.webp" alt="Картинг в «Smart Racing»: гонки в стайках" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span><span class="bdg b-new">Новинка</span></div>
-      <button type="button" class="fav" data-fav="s25" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta">0 отзывов</div>
-      <span class="cb" tabindex="0">кэшбэк до 5 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/25/">Картинг в «Smart Racing»: гонки в стайках</a>
-      <div class="sub">Активный отдых</div>
-      <div class="price">60 руб.</div>
-      <div class="btns"><a class="btn block" href="/surprise-booking-prototype/demo/">Купить сейчас</a><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s31" data-price="50">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/31/" aria-label="Незабываемая прогулка на лошадях в конном клубе «Мустанг»"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/803/bmz3zx7c0koayz9monavl1goxia4lv09.webp" alt="Незабываемая прогулка на лошадях в конном клубе «Мустанг»" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/f69/f6920313e084f1b4ec15f62ca74d1be7.jpg" alt="Незабываемая прогулка на лошадях в конном клубе «Мустанг»" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/163/2orl7jda9g47to3z2hwknjow6ryihfos.webp" alt="Незабываемая прогулка на лошадях в конном клубе «Мустанг»" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s31" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.5</b> · 119 отзывов</div>
-      <span class="cb" tabindex="0">кэшбэк до 4 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/31/">Незабываемая прогулка на лошадях в конном клубе «Мустанг»</a>
-      <div class="sub">Творчество и обучение</div>
-      <div class="price">50 руб.</div>
-      <div class="btns"><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s42" data-price="55">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/42/" aria-label="Стрельба в тире «Снайпер»: освойте разные виды оружия"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/81d/aihkxmrf3zobyjkmyj409emmw5461o8b.webp" alt="Стрельба в тире «Снайпер»: освойте разные виды оружия" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/e14/ff9dhtq8c3qbquaq24ounpggo2ysjd3a.webp" alt="Стрельба в тире «Снайпер»: освойте разные виды оружия" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/3d9/3shwtzi822mrkkn5nmvzkk1l3pzzzkmq.webp" alt="Стрельба в тире «Снайпер»: освойте разные виды оружия" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s42" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.9</b> · 57 отзывов</div>
-      <span class="cb" tabindex="0">кэшбэк до 3 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/42/">Стрельба в тире «Снайпер»: освойте разные виды оружия</a>
-      <div class="sub">Активный отдых</div>
-      <div class="price">55 руб.</div>
-      <div class="btns"><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s11" data-price="60">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/11/" aria-label="Индивидуальная прогулка верхом в сопровождении инструктора в Green Ranch"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/b25/7zvvrw1cbk60a89mn9oqcgqkkhe237d4.webp" alt="Индивидуальная прогулка верхом в сопровождении инструктора в Green Ranch" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/df2/u6s3bpja3nzwz402uh3pdesoprk28qs7.webp" alt="Индивидуальная прогулка верхом в сопровождении инструктора в Green Ranch" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/56a/2eb153b7hdvs3fjw4kwu7x4n421yfyhc.webp" alt="Индивидуальная прогулка верхом в сопровождении инструктора в Green Ranch" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-excl">Эксклюзив</span><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s11" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.7</b> · 55 отзывов</div>
-      <span class="cb" tabindex="0">кэшбэк до 3 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/11/">Индивидуальная прогулка верхом в сопровождении инструктора в Green Ranch</a>
-      <div class="sub">Активный отдых</div>
-      <div class="price">60 руб.</div>
-      <div class="btns"><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s72" data-price="222">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/72/" aria-label="HEAD SPA ритуал IKIGAI в спа салоне &quot;Икигай&quot;"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/61d/gliqsz3ohaon4f6hss3c0bk0xom03taq.webp" alt="HEAD SPA ритуал IKIGAI в спа салоне &quot;Икигай&quot;" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/87a/p00fpc2cvy7tn825tucriub6ez9zuzsi.webp" alt="HEAD SPA ритуал IKIGAI в спа салоне &quot;Икигай&quot;" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/798/9r3iib14v63u7y5il6szjt0kv3ujgnxb.webp" alt="HEAD SPA ритуал IKIGAI в спа салоне &quot;Икигай&quot;" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s72" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.7</b> · 109 отзывов</div>
-      <span class="cb" tabindex="0">кэшбэк до 18 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/72/">HEAD SPA ритуал IKIGAI в спа салоне &quot;Икигай&quot;</a>
-      <div class="sub">SPA и красота</div>
-      <div class="price">222 руб.</div>
-      <div class="btns"><a class="btn block" href="/surprise-booking-prototype/demo/">Купить сейчас</a><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s2" data-price="200">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/2/" aria-label="Джип-тур по бездорожью, 2 часа"><div class="track"><div class="slide c-pink"><img src="/surprise-booking-prototype/brand/mark-gift.svg" alt="" loading="lazy"></div><div class="slide c-purple"><img src="/surprise-booking-prototype/brand/mark-confetti.svg" alt="" loading="lazy"></div><div class="slide c-blue"><img src="/surprise-booking-prototype/brand/mark-smile.svg" alt="" loading="lazy"></div></div></a>
-      <div class="badges"><span class="bdg b-excl">Эксклюзив</span><span class="bdg b-only">Только в Surprise</span><span class="bdg b-new">Новинка</span></div>
-      <button type="button" class="fav" data-fav="s2" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.9</b> · 56 отзывов</div>
-      <span class="cb" tabindex="0">кэшбэк до 20 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/2/">Джип-тур по бездорожью, 2 часа</a>
-      <div class="sub">Активный отдых</div>
-      <div class="price">200 руб.</div>
-      <div class="btns"><a class="btn block" href="/surprise-booking-prototype/demo/">Купить сейчас</a><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s18" data-price="400">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/18/" aria-label="Знакомство с миром гольфа с завтраком в ресторане"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/4c6/wbz3ufxfq1q8u4u3f2k363vbsfrulmvl.webp" alt="Знакомство с миром гольфа с завтраком в ресторане" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/0c1/x2bcj3fvkt37g8mbrvartefijzf04qqf.webp" alt="Знакомство с миром гольфа с завтраком в ресторане" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/df8/e6umnb625dvh18bljs1bhxe2uhq2j1o9.webp" alt="Знакомство с миром гольфа с завтраком в ресторане" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-excl">Эксклюзив</span><span class="bdg b-hit">Хит</span><span class="bdg b-new">Новинка</span></div>
-      <button type="button" class="fav" data-fav="s18" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.9</b> · 4 отзыва</div>
-      <span class="cb" tabindex="0">кэшбэк до 16 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/18/">Знакомство с миром гольфа с завтраком в ресторане</a>
-      <div class="sub">Впечатления премиум</div>
-      <div class="price">400 руб.</div>
-      <div class="btns"><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s34" data-price="135">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/34/" aria-label="Полет в аэротрубе"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/01e/8auivnsvdf53vpo1we3x7t3wgz5e2r87.webp" alt="Полет в аэротрубе" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/b92/3qctcb76mjoyjwd8tsg6vw1iz930voxf.webp" alt="Полет в аэротрубе" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/1eb/st68n470rrd85kebmbj7az1e3q0zhqj4.webp" alt="Полет в аэротрубе" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s34" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>4.9</b> · 105 отзывов</div>
-      <span class="cb" tabindex="0">кэшбэк до 5 руб.<span class="tip" role="tooltip"><b>Что такое кэшбэк?</b> Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</span></span>
-      <a class="name" href="/surprise-booking-prototype/service/34/">Полет в аэротрубе</a>
-      <div class="sub">Творчество и обучение</div>
-      <div class="price">135 руб.</div>
-      <div class="btns"><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article><article class="tile" data-key="s77" data-price="25">
-    <div class="pic"><a class="trackwrap" href="/surprise-booking-prototype/service/77/" aria-label="Ощути драйв на двухуровневом картинге в центре «Картленд»"><div class="track"><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/702/zbngf0ygy0jzx0rr4nuhdrz018je5j6j.webp" alt="Ощути драйв на двухуровневом картинге в центре «Картленд»" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/4ac/qjw3sjudr4dwicgek7p69e7oi0q4yxfe.webp" alt="Ощути драйв на двухуровневом картинге в центре «Картленд»" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="slide"><img class="ph" src="https://surprise.by/upload/iblock/fa8/jj55318r2zbbtb79veunutk7mzhy4qv0.webp" alt="Ощути драйв на двухуровневом картинге в центре «Картленд»" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div></div></a>
-      <div class="badges"><span class="bdg b-hit">Хит</span></div>
-      <button type="button" class="fav" data-fav="s77" aria-label="В избранное"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.9 8.500 2.800 5 6.200 5c2 0 3.500 1 4.300 2.400h3C14.300 6 15.800 5 17.800 5c3.400 0 5.300 3.500 3.700 7C19 16.500 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
-      <div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div>
-    <div class="body">
-      <div class="meta"><span class="star">★</span> <b>5.0</b> · 154 отзыва</div>
-      
-      <a class="name" href="/surprise-booking-prototype/service/77/">Ощути драйв на двухуровневом картинге в центре «Картленд»</a>
-      <div class="sub">Активный отдых</div>
-      <div class="price">25 руб.</div>
-      <div class="btns"><a class="btn block" href="/surprise-booking-prototype/demo/">Купить сейчас</a><a class="btn gift block" href="/surprise-booking-prototype/demo/">Оформить в подарок</a></div>
-    </div></article></div>
-    <p class="empty" id="empty" hidden>Ничего не нашлось. <a href="?#catalog" id="reset" class="more">Сбросить фильтры</a></p>
-    <div id="pager"><nav class="pager" aria-label="Страницы каталога">
-    <span class="pg pg-arrow off">←</span>
-    <span class="pg on" aria-current="page">1</span><a class="pg " href="?page=2#catalog" data-page="2" >2</a><span class="pg-gap">…</span><a class="pg " href="?page=30#catalog" data-page="30" >30</a>
-    <a class="pg pg-arrow" href="?page=2#catalog" data-page="2" aria-label="Следующая страница">→</a>
-  </nav></div></section><section class="block"><div class="tg">
-  <div class="tg-text">
-    <span class="tg-free">Бесплатно</span>
-    <div class="eyebrow">Telegram-приложение</div>
-    <h2>Вишлист впечатлений в&nbsp;Telegram</h2>
-    <p>Листайте идеи как ленту: свайп вправо — в вишлист, влево — дальше. Фильтры по категории и поводу, ИИ-подбор скоро. Отправьте вишлист близким — они сразу поймут, что подарить.</p>
-    <ul class="tg-list"><li>Свайпы вместо долгого поиска</li><li>Вишлист, которым легко поделиться</li><li>Бронь и подарок в пару касаний</li></ul>
-    <a class="btn tg-btn" href="https://t.me/wishlistsurprisebot" target="_blank" rel="noopener">Открыть в Telegram →</a>
-    <div class="xs tg-url">t.me/wishlistsurprisebot</div>
-  </div>
-  <div class="tg-phone" aria-hidden="true">
-    <div class="tg-screen">
-      <div class="tg-chips"><i>Все</i><i>Полёты</i><i>SPA</i></div>
-      <div class="tg-card c-blue"><img src="/surprise-booking-prototype/brand/mark-confetti.svg" alt=""><b>Полёт на воздушном шаре</b><span>160 руб.</span></div>
-      <div class="tg-actions"><i>✕</i><i class="y">♥</i></div>
-      <small>Свайп вправо — в вишлист</small>
-    </div>
-    <span class="tg-float f1">♥ Хочу</span><span class="tg-float f2">Мимо</span>
-  </div></div></section><section class="block"><a class="corp" href="https://corp.surprise.by" target="_blank" rel="noopener">
-  <div><div class="eyebrow">Для бизнеса</div><h2>Впечатления для сотрудников и партнёров</h2><p>Подберём формат, упаковку и способ вручения для вашей команды и клиентов.</p></div>
-  <span class="btn">Перейти на corp.surprise.by →</span></a></section><section class="block why" id="why"><div class="eyebrow">О сервисе</div><h2 class="big">Впечатления вместо вещей</h2>
-  <div class="seo">
-    <p>Surprise.by — агрегатор впечатлений в Беларуси. В одном каталоге собраны сотни идей: активный отдых, SPA и красота, мастер-классы, рестораны, квесты и полёты. Выбирайте по поводу, возрасту, городу и бюджету, бронируйте удобное время онлайн и оплачивайте без визитов в офис.</p>
-    <p>Впечатления запоминаются дольше вещей. Поэтому их удобно дарить: не нужно угадывать размер или вкус, а получатель сам выбирает время и записывается. Подарить можно электронно за минуту или в фирменной упаковке с открыткой, шарами и конфетти.</p>
-    <h3>Дарите и делитесь</h3>
-    <p>Мы развиваем сервис как удобный способ делиться тем, что хочется прожить. Соберите вишлист в Telegram-приложении, отправьте близким и получайте подарки, которые действительно нужны. Для вручения доступны варианты: анонимно, менеджером Surprise.by, посылкой или самовывозом.</p>
-    <h3>Что получают партнёры</h3>
-    <p>Партнёры управляют расписанием и бронями в личном кабинете, получают новых клиентов и не платят комиссию за размещение.</p>
-  </div>
-  <div class="values">
-    <div class="ho-i"><h3>Миссия</h3><p>Помогать людям проживать яркие моменты и делиться ими.</p></div>
-    <div class="ho-i"><h3>Эксклюзив</h3><p>Ищем впечатления, которых нет у других, и договариваемся о лучших условиях.</p></div>
-    <div class="ho-i"><h3>Сервис</h3><p>Подскажем, забронируем, упакуем, доставим и вручим.</p></div>
-    <div class="ho-i"><h3>Честность</h3><p>Прозрачные цены, понятные сроки отмены, партнёры без скрытых комиссий.</p></div>
-    <div class="ho-i"><h3>Опыт</h3><p>15 лет создаём эмоции для людей и знаем, что работает.</p></div>
-  </div></section><section class="block"><div class="eyebrow">Вопросы</div><h2 class="big">Частые вопросы</h2>
-  <div class="faq"><details><summary>Что такое Surprise.by?</summary><p>Это сервис впечатлений: в одном каталоге собраны предложения партнёров — от SPA и мастер-классов до квестов и полётов. Впечатление можно забронировать для себя, подарить или добавить в вишлист.</p></details><details><summary>Как забронировать впечатление для себя?</summary><p>Откройте карточку, нажмите «Купить сейчас», выберите свободные дату и время в календаре, укажите контакты и оплатите. Бронь подтвердится сразу или после ответа партнёра.</p></details><details><summary>Как подарить впечатление?</summary><p>Нажмите «Оформить в подарок», выберите упаковку (электронный сертификат, конверт или коробка), способ доставки и вручения. Получатель сам выберет удобное время и запишется онлайн.</p></details><details><summary>Что такое универсальный сертификат?</summary><p>Это сертификат на любую сумму. Получатель сам выбирает впечатление из каталога, а вы не рискуете промахнуться.</p></details><details><summary>Как работает вишлист в Telegram?</summary><p>Откройте бота t.me/wishlistsurprisebot и листайте впечатления: свайп вправо — в вишлист, влево — дальше. Вишлистом можно поделиться с близкими. Приложение бесплатное.</p></details><details><summary>Можно ли подарить анонимно или вручить через менеджера?</summary><p>Да. При оформлении выберите вручение: анонимно, менеджером Surprise.by в Минске или посылкой.</p></details><details><summary>Сколько действует сертификат?</summary><p>Три месяца с момента покупки. Записаться можно только на даты в этом периоде.</p></details><details><summary>Можно ли перенести или отменить запись?</summary><p>Да, бесплатно — не позднее чем за срок, который задал партнёр (обычно за 24 часа до визита). Позже свяжитесь с партнёром напрямую: его контакты есть в брони.</p></details><details><summary>Что такое кэшбэк?</summary><p>Часть стоимости возвращается бонусами после того, как впечатление получено. Бонусами можно оплатить следующее.</p></details><details><summary>Как выбрать впечатление мужчине, женщине или ребёнку?</summary><p>Используйте фильтры «Пол», «Возраст» и «Повод». Не уверены — возьмите универсальный сертификат или попросите получателя собрать вишлист.</p></details><details><summary>Можно ли заказать несколько впечатлений сразу?</summary><p>Да. Добавьте нужное в корзину, выберите одну упаковку для всех или отдельную для каждого: допы тоже настраиваются отдельно.</p></details><details><summary>Как подключиться партнёру?</summary><p>Оставьте заявку на странице «Партнерам». Условия обсуждаем индивидуально, комиссии за размещение нет.</p></details></div></section><script src="/surprise-booking-prototype/home.js" defer></script></main>
-<footer class="foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="fc-brand"><img src="/surprise-booking-prototype/brand/logo.svg" alt="Surprise.by" height="28"><p class="small muted">Незабываемые впечатления: бронируйте, дарите, делитесь.</p>
-      <a class="btn tgbtn sm" href="https://t.me/wishlistsurprisebot" target="_blank" rel="noopener">Вишлист в Telegram →</a></div>
-    <div><h4>Клиентам</h4><a href="/surprise-booking-prototype/delivery/">Оплата и доставка</a><a href="/surprise-booking-prototype/reviews/">Отзывы</a><a href="/surprise-booking-prototype/demo/">Активировать сертификат</a><a href="/surprise-booking-prototype/about/#why">Вопросы и ответы</a><a href="/surprise-booking-prototype/demo/">Журнал уведомлений</a></div>
-    <div><h4>О нас</h4><a href="/surprise-booking-prototype/about/">О компании</a><a href="/surprise-booking-prototype/blog/">Блог</a><a href="/surprise-booking-prototype/contacts/">Контакты</a><a href="/surprise-booking-prototype/partners/">Партнерам</a><a href="https://corp.surprise.by" target="_blank" rel="noopener">Компаниям</a></div>
-    <div><h4>Каталог</h4><a href="/surprise-booking-prototype/?cat=%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85#catalog">Активный отдых</a><a href="/surprise-booking-prototype/?cat=SPA%20%D0%B8%20%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0#catalog">SPA и красота</a><a href="/surprise-booking-prototype/?cat=%D0%A2%D0%B2%D0%BE%D1%80%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%20%D0%B8%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5#catalog">Творчество и обучение</a><a href="/surprise-booking-prototype/?cat=%D0%95%D0%B4%D0%B0%20%D0%B8%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B#catalog">Еда и рестораны</a><a href="/surprise-booking-prototype/?exclusive=1#catalog">Эксклюзив</a></div>
-  </div>
-  <div class="foot-bottom xs"><span>Прототип: оплата, календари и уведомления имитируются. Реквизиты — заглушка.</span><span><a href="/surprise-booking-prototype/legal/offer/">Публичная оферта</a> · <a href="/surprise-booking-prototype/legal/privacy/">Политика персональных данных</a></span></div>
-</div></footer>
-<script src="/surprise-booking-prototype/wizard.js" defer></script>
-</body></html>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; text-align: center; padding: 24px; }
+  img { height: 34px; margin-bottom: 24px; }
+  .bar { width: 160px; height: 4px; border-radius: 4px; background: #eee; margin: 20px auto 0; overflow: hidden; }
+  .bar i { display: block; width: 40%; height: 100%; background: #9BE1FF; border-radius: 4px; animation: m 1.1s ease-in-out infinite; }
+  @keyframes m { 0% { transform: translateX(-100%); } 100% { transform: translateX(260%); } }
+  small { color: #6f6f6f; display: block; max-width: 36ch; margin: 8px auto 0; font-size: 14px; }
+</style></head><body>
+<div><img src="/surprise-booking-prototype/brand/logo.svg" alt="Surprise.by">
+<div id="msg">Запускаем прототип…</div>
+<div class="bar"><i></i></div>
+<small>Первый запуск займёт несколько секунд: база данных создаётся прямо в вашем браузере.</small></div>
+<script>
+(async () => {
+  const BASE = '/surprise-booking-prototype';
+  const msg = document.getElementById('msg');
+  const fail = (t) => { msg.textContent = t; document.querySelector('.bar').remove(); };
+  if (!('serviceWorker' in navigator)) return fail('Нужен современный браузер (Chrome, Safari, Firefox, Edge).');
+  const tries = Number(sessionStorage.getItem('boot-tries') || 0);
+  if (tries > 3) { sessionStorage.removeItem('boot-tries'); return fail('Не получилось запустить прототип. Обновите страницу или откройте её в другом браузере.'); }
+  sessionStorage.setItem('boot-tries', tries + 1);
+  try {
+    await navigator.serviceWorker.register(BASE + '/sw.js', { scope: BASE + '/' });
+    await navigator.serviceWorker.ready;
+    if (!navigator.serviceWorker.controller) {
+      await new Promise((r) => { navigator.serviceWorker.addEventListener('controllerchange', r, { once: true }); setTimeout(r, 4000); });
+    }
+    await fetch(BASE + '/catalog.json'); // прогрев: создаем базу до открытия страницы
+    sessionStorage.removeItem('boot-tries');
+    location.replace(location.href);
+  } catch (e) { fail('Ошибка запуска: ' + e.message); }
+})();
+</script></body></html>

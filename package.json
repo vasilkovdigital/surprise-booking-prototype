@@ -9,8 +9,19 @@
   },
   "scripts": {
     "start": "node --disable-warning=ExperimentalWarning server.js",
-    "seed": "node --disable-warning=ExperimentalWarning src/seed.js",
+    "seed": "node --disable-warning=ExperimentalWarning src/seed-cli.js",
     "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js",
-    "build:static": "node --disable-warning=ExperimentalWarning scripts/build-static.mjs"
+    "build:pages": "node --disable-warning=ExperimentalWarning scripts/build-pages.mjs"
+  },
+  "devDependencies": {
+    "@noble/hashes": "^2.4.0",
+    "esbuild": "^0.28.2",
+    "sql.js": "^1.15.0"
+  },
+  "imports": {
+    "#crypto": {
+      "browser": "./src/browser/crypto.js",
+      "default": "./src/crypto.js"
+    }
   }
 }

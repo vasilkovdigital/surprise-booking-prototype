@@ -63,7 +63,7 @@ export function render(ctx, title, body, opts = {}) {
     <div><h4>О нас</h4><a href="/about">О компании</a><a href="/blog">Блог</a><a href="/contacts">Контакты</a><a href="/partners">Партнерам</a><a href="https://corp.surprise.by" target="_blank" rel="noopener">Компаниям</a></div>
     <div><h4>Каталог</h4><a href="/?cat=%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85#catalog">Активный отдых</a><a href="/?cat=SPA%20%D0%B8%20%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0#catalog">SPA и красота</a><a href="/?cat=%D0%A2%D0%B2%D0%BE%D1%80%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%20%D0%B8%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5#catalog">Творчество и обучение</a><a href="/?cat=%D0%95%D0%B4%D0%B0%20%D0%B8%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B#catalog">Еда и рестораны</a><a href="/?exclusive=1#catalog">Эксклюзив</a></div>
   </div>
-  <div class="foot-bottom xs"><span>Прототип: оплата, календари и уведомления имитируются. Реквизиты — заглушка.</span><span><a href="/legal/offer">Публичная оферта</a> · <a href="/legal/privacy">Политика персональных данных</a></span></div>
+  <div class="foot-bottom xs"><span>Прототип: оплата, календари и уведомления имитируются. Реквизиты — заглушка. ${globalThis.__BROWSER_APP__ ? '<form method="post" action="/__reset" class="inline" onsubmit="return confirm(\'Сбросить все данные прототипа (брони, заказы, аккаунты)?\')"><button class="link">Сбросить данные</button></form>' : ''}</span><span><a href="/legal/offer">Публичная оферта</a> · <a href="/legal/privacy">Политика персональных данных</a></span></div>
 </div></footer>
 <script src="/wizard.js" defer></script>
 </body></html>`;

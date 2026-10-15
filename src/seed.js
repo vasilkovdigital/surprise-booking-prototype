@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'node:url';
-import { db, dropAll, initSchema, run, get } from './db.js';
+import { dropAll, initSchema, run } from './db.js';
 import { hashPassword } from './auth.js';
 import path from 'node:path';
 import { readMerchant } from './merchant.js';
@@ -64,12 +64,6 @@ export function seed() {
   seedCatalog({ A, B, V, bundle, user, partner });
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  seed();
-  console.log('База заполнена тестовыми данными. Пароль всех тестовых аккаунтов:', TEST_PASSWORD);
-  console.log('Пользователей:', get('SELECT COUNT(*) c FROM users').c);
-  db.close();
-}
 
 // ---- витрина главной: метаданные для фильтров/сортировок и дополнительные (вымышленные) предложения ----
 // meta: [category, people, city, occasion, gender, age, is_new, exclusive, rating, reviews, cashback, badges, popularity]
